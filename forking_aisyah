@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Home - Tiara's Website</title>
+
+  <style>
+    :root { --pink:#f8c8dc; --light:#fff0f5; --box:#ffe6f0; }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: "Times New Roman", Times, serif; background:#fff; }
+
+    header {
+      display:flex; align-items:center; justify-content:space-between;
+      background:var(--pink); padding:8px 16px;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+      position:relative;
+    }
+    header .logo {
+      width:70px; height:70px;
+      border-radius:50%; overflow:hidden;
+      border:3px solid #0b0b0b; background:#fff;
+      display:flex; align-items:center; justify-content:center;
+    }
+    header .logo img { width:100%; height:100%; object-fit:cover; }
+
+    header .title {
+      flex:1; text-align:center; color:#fff;
+      font-size:26px; font-weight:700; letter-spacing:1px;
+      margin:0 20px;
+    }
+
+    
+    header .ig-link img {
+      width:34px; height:34px; cursor:pointer;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+      border-radius: 50%;
+      object-fit: cover;
+      transition:0.3s;
+    }
+    header .ig-link img:hover { transform:scale(1.2); }
+
+    
+    .topnav {
+      display:flex; justify-content:center; align-items:center;
+      gap:32px; padding:14px 20px; background: #fff;
+      position: relative; z-index:1000;
+    }
+    .topnav a {
+      text-decoration:none; color:#b30059;
+      font-weight:700; font-size:18px;
+      padding:6px 14px; border-radius:6px;
+      transition:0.3s;
+    }
+    .topnav a:hover {
+      background:var(--pink); color:#fff;
+    }
+
+    main.container {
+      display:grid; grid-template-columns: 320px 1fr 320px;
+      gap:22px; padding:20px 28px; align-items:start;
+    }
+
+    fieldset {
+      border:2px solid #d48ba3; padding:14px 18px; background: #fff;
+    }
+    legend { padding:0 8px; font-weight:700; font-size:18px; text-align:center; color:#b30059; }
+
+    ul.sosmed, ul.course {
+      list-style:none; padding:10px 6px; margin:6px 0 0 0;
+    }
+    ul.sosmed li, ul.course li {
+      margin:14px 0; display:flex; align-items:center; gap:12px;
+    }
+    ul.sosmed img, ul.course img {
+      width:56px; height:56px; object-fit:cover;
+      border:2px solid #ddd; display:block;
+    }
+    ul.course img { border-radius:6px; }
+
+    ul.sosmed a, ul.course a {
+      color:#b30059; text-decoration:underline; font-size:18px; font-weight:600;
+    }
+
+    .frame-box {
+      background: #ffe6f0; height:640px;
+      border-radius:4px; border: 1px solid #ddd;
+      overflow:hidden; display:flex;
+    }
+    iframe#mainframe { width:100%; height:100%; border:0; background:#ffe6f0; }
+
+   
+    footer {
+      background:linear-gradient(90deg, #f5b5cc, #f8c8dc); 
+      color:#fff; text-align:center;
+      padding:14px; font-weight:600; margin-top:18px;
+    }
+
+    @media (max-width:980px){
+      main.container { grid-template-columns: 1fr; }
+      .frame-box { height:450px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="images/logopolsri.jpeg" alt="logo"></div>
+    <div class="title">
+      <marquee behavior="scroll" direction="left" scrollamount="6">
+        WELCOME TO TIARA'S WEBSITE
+      </marquee>
+    </div>
+    <a href="https://www.instagram.com/nbilaa_11" target="_blank" class="ig-link">
+      <img src="images/logoigtiara.jpg" alt="Instagram">
+    </a>
+  </header>
+
+  <div class="topnav">
+    <a href="home.html" target="mainframe">Home</a>
+    <a href="mystudy.html" target="mainframe">My Study</a>
+    <a href="gallery.html" target="mainframe">Gallery</a>
+  </div>
+
+  <main class="container">
+
+    <aside class="box">
+      <fieldset>
+        <legend>Social Media</legend>
+        <ul class="sosmed">
+          <li><img src="images/foto1.jpeg" alt="Lidya">
+              <a href="https://www.instagram.com/syafitrilidya" target="_blank">Instagram Lidya</a></li>
+          <li><img src="images/foto2.jpeg" alt="Aisyah">
+              <a href="https://www.instagram.com/slcca_" target="_blank">Instagram Aisyah</a></li>
+          <li><img src="images/foto3.jpeg" alt="Amelia">
+              <a href="https://www.instagram.com/ameliaardhanaaa" target="_blank">Instagram Amelia</a></li>
+          <li><img src="images/foto4.jpeg" alt="Pavita">
+              <a href="https://www.instagram.com/pavitamndaa" target="_blank">Instagram Pavita</a></li>
+          <li><img src="images/foto5.jpeg" alt="Nisya">
+              <a href="https://www.instagram.com/nissyanlr" target="_blank">Instagram Nisya</a></li>
+        </ul>
+      </fieldset>
+    </aside>
+
+    <section class="frame-box">
+      <iframe id="mainframe" name="mainframe" src="home.html"></iframe>
+    </section>
+
+    <aside class="box">
+      <fieldset>
+        <legend>Course</legend>
+        <ul class="course">
+          <li><img src="images/logovscode.jpeg" alt="vscode">
+              <a href="https://www.gubokkoding.my.id/2019/12/pengertian-dan-dasar-dasar-vbnet.html#google_vignette" target="mainframe">Visual Studio Code</a></li>
+          <li><img src="images/logonf.jpeg" alt="Nurul Fikri Academy">
+              <a href="https://www.nfacademy.id" target="mainframe">NF Academy</a></li>
+          <li><img src="images/logojava.jpeg" alt="java">
+              <a href="https://www.jagoanhosting.com/blog/java-adalah/" target="mainframe">Java</a></li>
+          <li><img src="images/logophp.jpeg" alt="PHP">
+              <a href="https://www.jagoanhosting.com/blog/java-adalah/" target="mainframe">PHP</a></li>
+          <li><img src="images/logopython.jpeg" alt="Python">
+              <a href="https://belajarpython.com/" target="mainframe">Python</a></li>
+        </ul>
+      </fieldset>
+    </aside>
+
+  </main>
+
+  <footer>
+    © 2025 Tiara Cahya Maulizah Nabila. All rights reserved.
+  </footer>
+
+</body>
+</html>
